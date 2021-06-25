@@ -24,18 +24,18 @@
     }
 
 
-    //padding-top: 1.5rem !important;
-    //&:after {
-    //  position: absolute;
-    //  top: 0;
-    //  left: 0;
-    //  font-size: 0.75rem;
-    //  line-height: 24px;
-    //  content: "Whole Hours";
-    //  padding: 0 6px;
-    //  background-color: rgb(224 224 224 / 75%);
-    //  border-bottom-right-radius: 6px;
-    //}
+    padding-top: 1.5rem !important;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0.75rem;
+      line-height: 24px;
+      content: "Whole Hours";
+      padding: 0 6px;
+      background-color: rgb(224 224 224 / 75%);
+      border-bottom-right-radius: 6px;
+    }
 
   }
 }
