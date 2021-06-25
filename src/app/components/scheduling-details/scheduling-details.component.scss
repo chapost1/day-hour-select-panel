@@ -1,0 +1,21 @@
+.scheduling-details-wrapper {
+  .scheduling-controls {
+    width: 100%;
+    overflow-x: hidden;
+
+    &.overflow-visible {
+      overflow: visible;
+    }
+
+    .scheduling-selection-panel-container {
+      position: relative;
+      top: -420px;
+      opacity: 0;
+
+      &.visible {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

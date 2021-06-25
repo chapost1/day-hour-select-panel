@@ -1,0 +1,41 @@
+.summary-wrapper {
+  .summary {
+    text-align: start;
+    line-height: 28px;
+    box-shadow: 0 0 0 rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 8%);
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px !important;
+    color: inherit !important;
+
+    .summary-line {
+      display: block;
+    }
+
+    .edit-button {
+      color: #555555;
+
+      &:hover {
+        color: #222;
+      }
+
+      .edit-schedule-icon {
+        font-size: 1.3rem !important;
+      }
+    }
+
+
+    //padding-top: 1.5rem !important;
+    //&:after {
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  font-size: 0.75rem;
+    //  line-height: 24px;
+    //  content: "Whole Hours";
+    //  padding: 0 6px;
+    //  background-color: rgb(224 224 224 / 75%);
+    //  border-bottom-right-radius: 6px;
+    //}
+
+  }
+}

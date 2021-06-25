@@ -1,0 +1,26 @@
+<div class="scheduling-details-wrapper">
+  <div class="mt-2 mb-1 scheduling-controls overflow-visible">
+    <div *ngIf="shouldVisualizeSummaryPanel">
+      <app-summary
+        [days]="days"
+        [hours]="hours"
+        [includedMatrix]="includedMatrix"
+        (editSchedule)="enterEditMode()"
+      ></app-summary>
+    </div>
+
+    <div *ngIf="shouldVisualizeEditPanel" class="overflow-hidden">
+      <div class="scheduling-selection-panel-container {{isEditPanelVisible? 'visible': ''}}"
+           [style.transition]="editPanelTransitionAttributeValue">
+        <app-selection-panel
+          [days]="days"
+          [hours]="hours"
+          (save)="onPanelSave($event)"
+          (cancel)="onPanelCancel()"
+          [inputIncludedMatrix]="includedMatrix">
+        </app-selection-panel>
+      </div>
+    </div>
+  </div>
+
+</div>

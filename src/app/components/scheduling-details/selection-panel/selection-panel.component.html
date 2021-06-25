@@ -1,0 +1,70 @@
+<div class="selection-panel-wrapper-container">
+  <div class="selection-panel-wrapper">
+    <div class="row px-2 font-weight-bold panel-header">
+      <div class="col-3 panel-header-actions">
+        <a class="clickable vertical-align" (click)="setAllAs(true)"><u>All</u></a>
+        <div class="vertical-align d-inline-block no-user-select">
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+        </div>
+        <a class="clickable vertical-align" (click)="setAllAs(false)"><u>Reset</u></a>
+      </div>
+      <div class="col-6"></div>
+      <div class="col-3 panel-legend no-user-select">
+        <div class="mx-1 vertical-align d-inline-block panel-legend-thumbnail included"></div>
+        <div class="mx-2 vertical-align d-inline-block">Included</div>
+        <div class="mx-2 vertical-align d-inline-block panel-legend-thumbnail excluded"></div>
+        <div class="mx-1 vertical-align d-inline-block">Excluded</div>
+      </div>
+    </div>
+
+    <div class="my-2"></div>
+
+    <div class="schedule-panel-grid-container px-1 no-user-select">
+      <div class="grid" (mouseleave)="onMouseLeavesPanel()">
+        <div class="schedule-selection-grid grid-hours">
+          <button type="button"></button>
+          <button *ngFor="let hour of hours"
+                  class="hour-toggle-button"
+                  type="button"
+                  (click)="toggleHour($event, hour)"
+                  (mouseenter)="onMouseLeavesPanel()"
+          >{{hour}}</button>
+        </div>
+        <div class="schedule-selection-grid"
+             *ngFor="let dayTitle of days; let day = index;">
+          <button
+            class="day-toggle-button"
+            type="button"
+            (click)="toggleDay($event, day)"
+            (mouseenter)="onMouseLeavesPanel()"
+          >{{dayTitle}}</button>
+          <button *ngFor="let hour of hours"
+                  class="schedule-selection-button {{getPanelItemClass(day, hour)}}"
+                  type="button"
+                  (mousedown)="onMouseDown($event, day, hour)"
+                  (mouseenter)="onMouseEnter($event, day, hour)"
+                  (mouseup)="onMouseUp($event, day, hour)"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-2"></div>
+
+    <div class="row panel-footer">
+      <div class="panel-footer-actions mb-2">
+        <button class="btn btn-sm cancel-btn mx-3"
+                type="button"
+                *ngIf="isEditingAnExistingData"
+                (click)="onCancel()">Discard</button>
+
+        <button
+          class="btn btn-sm btn-accent save-btn mx-2"
+          type="button"
+          (click)="onSave()"
+          [disabled]="!isValid">Save Selection
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

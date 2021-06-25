@@ -1,0 +1,14 @@
+<div class="summary-wrapper">
+  <button mat-stroked-button disabled class="summary py-2">
+        <span [innerHTML]="summary | safeHtml">
+        </span>
+    <a class="pull-right clickable edit-button" (click)="onEditSchedule()">
+            <span class="material-icons edit-schedule-icon vertical-align">
+                edit
+            </span>
+      <u class="font-weight-bolder vertical-align">
+        Edit
+      </u>
+    </a>
+  </button>
+</div>
