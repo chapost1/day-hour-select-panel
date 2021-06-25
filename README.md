@@ -15,7 +15,7 @@ this panel is a part of the edit/create entity form (optional, default is always
 
 Select Options:
 
-1. Toggle By Click
-2. Drag Select
-3. In the original component I had to implement shift, but I decided not to upload it becuase I see it useless when we have dragging
-4. Click on Day / Hour Button
+1. Toggle By Click.
+2. Drag Select.
+3. The original component has shift method, which is omitted. It's redundant when we have drag-selection method.
+4. Click on Day / Hour Button.
