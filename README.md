@@ -13,9 +13,8 @@ this panel is a part of the edit/create entity form (optional, default is always
 
 <hr>
 
-Select Options:
-
+How To Select: (options)
 1. Toggle By Click.
 2. Drag Select.
-3. The original component has shift method, which is omitted. It's redundant when we have drag-selection.
-4. Click on Day / Hour Button.
+3. Click on Day / Hour Button.
+4. The original component has shift method, which is omitted. It's redundant when we have drag-selection.
