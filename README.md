@@ -17,5 +17,5 @@ Select Options:
 
 1. Toggle By Click.
 2. Drag Select.
-3. The original component has shift method, which is omitted. It's redundant when we have drag-selection method.
+3. The original component has shift method, which is omitted. It's redundant when we have drag-selection.
 4. Click on Day / Hour Button.
