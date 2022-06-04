@@ -70,18 +70,16 @@ export class SummaryComponent implements OnInit {
     return groups;
   }
 
-  private hourSummaryFormat(hour: number): string {
+  private hourSummaryFormat(hour: number, endOfRange: boolean): string {
+    const minutes = endOfRange ? '59' : "00";
     if (hour < 10) {
-      return `0${hour}:00`;
+      return `0${hour}:${minutes}`;
     }
-    return `${hour}:00`;
+    return `${hour}:${minutes}`;
   }
 
   private hoursRangeFormat(since: number, until: number): string {
-    if (since === until) {
-      return `(${this.hourSummaryFormat(since)})`;
-    }
-    return `(${this.hourSummaryFormat(since)} - ${this.hourSummaryFormat(until)})`;
+    return `(${this.hourSummaryFormat(since, false)}) - (${this.hourSummaryFormat(until, true)})`;
   }
 
   private isAllDay(hours): boolean {
